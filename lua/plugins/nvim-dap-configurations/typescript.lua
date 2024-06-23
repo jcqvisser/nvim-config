@@ -67,7 +67,6 @@ local pwa_chrome_attach = {
   skipFiles = { "**/node_modules/**/*" },
 }
 
-
 local configurations = {
   pwa_node_launch,
   pwa_node_attach,

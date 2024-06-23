@@ -1,4 +1,4 @@
-local ensure_installed = function()
+local ensure_lazy_package_manager_installed = function()
   local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
   if not (vim.uv or vim.loop).fs_stat(lazypath) then
     vim.fn.system({
@@ -13,6 +13,4 @@ local ensure_installed = function()
   vim.opt.rtp:prepend(lazypath)
 end
 
-return {
-  ensure_installed = ensure_installed  
-}
+return ensure_lazy_package_manager_installed 

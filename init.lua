@@ -1,4 +1,4 @@
-require('install-lazy-package-manager').ensure_installed()
+require('utils.ensure-lazy-package-manager-installed')()
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"

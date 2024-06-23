@@ -1,6 +1,5 @@
-local if_installed = require('keymap.utils').if_installed;
-local bind_fn = require('keymap.utils').bind_fn;
-local bind_cmd = require('keymap.utils').bind_cmd;
+local bind_fn = require('utils.keymap-utils').bind_fn;
+local bind_cmd = require('utils.keymap-utils').bind_cmd;
 
 return {
   nvim_dap_lazy = function()
