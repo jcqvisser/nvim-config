@@ -54,5 +54,10 @@ return {
     bind_cmd("n", '<leader>bn', '<cmd>bn<CR>')
     bind_cmd("n", '<leader>bp', '<cmd>bp<CR>')
     bind_cmd("n", '<leader>h', '<cmd>noh<CR>')
+    bind_cmd("n", ';', ':')
+    vim.cmd('ab Q q')
+    vim.cmd('ab Qa qa')
+    vim.cmd('ab Qa! qa!')
+    vim.cmd('ab ; :')
   end
 }
