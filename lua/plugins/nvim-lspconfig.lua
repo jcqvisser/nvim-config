@@ -3,7 +3,7 @@ local spec = {
   config = function()
     lsp_config = require("lspconfig")
     lsp_config.tsserver.setup({ })
-    lsp_config.gopls.setup({ })
+    -- lsp_config.gopls.setup({ })
     lsp_config.clangd.setup({
       on_attach = function(client, bufnr)
         client.server_capabilities.signatureHelpProvider = false

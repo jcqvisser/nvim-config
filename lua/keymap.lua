@@ -58,6 +58,5 @@ return {
     vim.cmd('ab Q q')
     vim.cmd('ab Qa qa')
     vim.cmd('ab Qa! qa!')
-    vim.cmd('ab ; :')
   end
 }

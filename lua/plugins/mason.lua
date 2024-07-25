@@ -6,7 +6,7 @@ local spec = {
     require("mason-lspconfig").setup({
       ensure_installed = {
         "tsserver", -- ts
-        "gopls", -- go
+        -- "gopls", -- go
         "clangd", -- cpp
         "angularls",
       } 
