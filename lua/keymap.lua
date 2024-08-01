@@ -37,6 +37,16 @@ return {
   },
 
   setup_lsp_keymap = function()
+
+    local function organize_imports()
+      local params = {
+        command = "_typescript.organizeImports",
+        arguments = {vim.api.nvim_buf_get_name(0)},
+        title = ""
+      }
+      vim.lsp.buf.execute_command(params)
+    end
+
     bind_cmd("", "<Space>", "<Nop>")
     bind_fn("n", "<leader>lr", vim.lsp.buf.rename)
     bind_fn("n", "<leader>lD", vim.lsp.buf.declaration)
@@ -47,6 +57,9 @@ return {
     bind_fn("n", "<leader>lc", vim.lsp.buf.code_action)
     bind_fn("n", "<leader>lR", vim.lsp.buf.references)
     bind_fn("n", "<leader>lf", vim.lsp.buf.format)
+    bind_fn("n", "<leader>l?", vim.diagnostic.open_float)
+    bind_fn("n", "<leader>lo", organize_imports)
+
   end,
 
   setup_misc_keymap = function()
